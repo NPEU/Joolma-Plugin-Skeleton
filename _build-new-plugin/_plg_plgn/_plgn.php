@@ -3,9 +3,8 @@
  * @package     Joomla.Plugin
  * @subpackage  _grp._plgn
  *
- * @copyright   Copyright (C) 2016 NPEU
- * @author		Andy Kirk
- * @license		License GNU General Public License version 2 or later
+ * @copyright   Copyright (C) NPEU 2018.
+ * @license     MIT License; see LICENSE.md
  */
 
 defined('_JEXEC') or die;
