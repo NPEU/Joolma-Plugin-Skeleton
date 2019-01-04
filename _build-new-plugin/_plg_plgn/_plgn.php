@@ -3,7 +3,7 @@
  * @package     Joomla.Plugin
  * @subpackage  _grp._plgn
  *
- * @copyright   Copyright (C) NPEU 2018.
+ * @copyright   Copyright (C) NPEU 2019.
  * @license     MIT License; see LICENSE.md
  */
 
@@ -18,14 +18,14 @@ class plg_Plgn extends JPlugin
     protected $autoloadLanguage = true;
 
     /**
-	 * @param   array  $options  Array holding options
-	 *
-	 * @return  boolean  True on success
-	 *
-	 * @since   3.2
-	 */
-	public function onUserAfterLogin($options)
-	{
+     * @param   array  $options  Array holding options
+     *
+     * @return  boolean  True on success
+     *
+     * @since   3.2
+     */
+    public function onUserAfterLogin($options)
+    {
         #echo '<pre>'; var_dump($options); echo '</pre>';
         #exit;
         #if ($options['user']->username == 'Webmaster') {
@@ -33,6 +33,6 @@ class plg_Plgn extends JPlugin
             //JFactory::getApplication()->enqueueMessage(JText::_('PLG_USER_LOGINMESSAGES_STAFF_PROFILE_MESSAGE'), 'notice');
             JFactory::getApplication()->enqueueMessage('Testing', 'notice');
         #}
-		return true;
-	}
+        return true;
+    }
 }
