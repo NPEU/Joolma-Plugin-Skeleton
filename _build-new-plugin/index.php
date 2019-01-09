@@ -39,6 +39,7 @@ perform_renames(
     array(
         '{{NAME}}'        => $name,
         '{{DESCRIPTION}}' => $description,
+        '{{GRP}}'         => $uc_group,
         '_plgn'           => str_replace(' ', '', $lc_name),
         '_grp'            => $lc_group,
         '_Plgn'           => $classname,
