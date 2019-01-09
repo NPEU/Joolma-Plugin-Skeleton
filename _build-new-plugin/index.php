@@ -1,13 +1,12 @@
 #!/usr/bin/php5
 <?php
-//echo 'Started'; exit;
 // Parse command line arguments into the $_GET variable:
 parse_str(implode('&', array_slice($argv, 1)), $_GET);
 
 echo 'Name: ' . $_GET['name'] . "\n";
 echo 'Group: ' . $_GET['group'] . "\n";
 echo 'Description: ' . $_GET['description'] . "\n";
-#exit;
+
 $name        = ucwords($_GET['name']);
 $lc_name     = strtolower($name);
 $uc_name     = strtoupper($name);
@@ -29,7 +28,7 @@ echo 'Classname: ' . $classname . "\n";
 
 include_once('_functions.php');
 
-$new_dir     = dirname(__DIR__) . '/' . $plg_lc_name;
+$new_dir     = dirname(__DIR__) . '/__builds/' . $plg_lc_name;
 
 copy_dir(__DIR__ . '/_plg_plgn', $new_dir);
 
