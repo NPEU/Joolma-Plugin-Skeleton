@@ -1,6 +1,11 @@
 @echo off
 @echo Arguments that contain spaces spaces must me enclosed in "".
 
+:promptowner
+set /p Ow= Enter owner name (e.g. NPEU): 
+
+if [%Ow%]==[] goto checkowner
+
 :promptname
 set /p Nm= Enter new component name (e.g. Alerts): 
 
@@ -16,11 +21,16 @@ set /p Ds= Enter new component description (e.g. "User alerts plugin"):
 
 if [%Ds%]==[] goto checkdesc
 
-php -f _build-new-plugin/index.php name=%Nm% group=%Gp% description=%Ds%
+php -f _build-new-plugin/index.php owner=%Ow% name=%Nm% group=%Gp% description=%Ds%
 
 pause
 goto :eof
 
+
+:checkowner
+@echo You must enter an owner name
+pause
+goto :promptowner
 
 :checkname
 @echo You must enter a name

@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><extension type="plugin" group="_grp" version="3.2.0">    <name>PLG_GRP_PLGN</name>    <author>Andy Kirk</author>    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>    <creationDate>January 2019</creationDate>    <copyright>(C) NPEU 2019</copyright>    <license>MIT License; see LICENSE.md</license>    <!--  The version string is recorded in the components table -->    <version>1.0.0</version>    <!-- The description is optional and defaults to the name -->    <description>PLG_GRP_PLGN_XML_DESCRIPTION</description>    <files>        <filename plugin="_plgn">_plgn.php</filename>        <filename>index.html</filename>        <folder>language</folder>    </files></extension>
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="_grp" version="3.2.0">
+
+    <name>PLG_GRP_PLGN</name>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>{{MONTH}} {{YEAR}}</creationDate>
+    <copyright>(C) {{OWNER}} {{YEAR}}</copyright>
+    <license>MIT License; see LICENSE.md</license>
+
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>PLG_GRP_PLGN_XML_DESCRIPTION</description>
+
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="plg__plgn Update Site">https://raw.githubusercontent.com/{{OWNER}}/plg__plgn/master/update-manifest.xml</server>
+    </updateservers>
+    
+    <files>
+        <filename plugin="_plgn">_plgn.php</filename>
+        <filename>index.html</filename>
+        <filename>update-manifest.xml</filename>
+        <folder>language</folder>
+    </files>
+
+</extension>

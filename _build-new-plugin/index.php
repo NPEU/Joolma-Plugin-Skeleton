@@ -3,10 +3,12 @@
 // Parse command line arguments into the $_GET variable:
 parse_str(implode('&', array_slice($argv, 1)), $_GET);
 
+echo 'Owner: ' . $_GET['owner'] . "\n";
 echo 'Name: ' . $_GET['name'] . "\n";
 echo 'Group: ' . $_GET['group'] . "\n";
 echo 'Description: ' . $_GET['description'] . "\n";
 
+$owner       = ucwords($_GET['owner']);
 $name        = ucwords($_GET['name']);
 $lc_name     = strtolower($name);
 $uc_name     = strtoupper($name);
@@ -36,14 +38,18 @@ perform_renames(
     $new_dir,
     array('_plgn', str_replace(' ', '', $lc_name)),
     array(
-        '{{NAME}}'        => $name,
-        '{{DESCRIPTION}}' => $description,
-        '{{GRP}}'         => $group,
-        '_plgn'           => str_replace(' ', '', $lc_name),
-        '_grp'            => $lc_group,
-        '_Plgn'           => $classname,
-        'GRP'             => $uc_group,
-        '_PLGN'           => '_' . str_replace(' ', '', $uc_name)
+        '{{OWNER}}'         => $owner,
+        '{{NAME}}'          => $name,
+        '{{NAME-NO-SPACE}}' => str_replace(' ', '', $name),
+        '{{DESCRIPTION}}'   => $description,
+        '{{GRP}}'           => $group,
+        '_plgn'             => str_replace(' ', '', $lc_name),
+        '_grp'              => $lc_group,
+        '_Plgn'             => $classname,
+        'GRP'               => $uc_group,
+        '_PLGN'             => '_' . str_replace(' ', '', $uc_name),
+        '{{MONTH}}'         => date('F'),
+        '{{YEAR}}'          => date('Y')
     )
 );
 
