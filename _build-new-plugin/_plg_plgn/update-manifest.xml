@@ -3,7 +3,7 @@
     <update>
         <name>{{OWNER}}: plg__plgn</name>
         <description>Joomla! plg__plgn plugin</description>
-        <element>futurepublish</element>
+        <element>_plgn</element>
         <type>plugin</type>
         <folder>_grp</folder>
         <version>1.0.0</version>
