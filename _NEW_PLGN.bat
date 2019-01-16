@@ -7,7 +7,7 @@ set /p Ow= Enter owner name (e.g. NPEU):
 if [%Ow%]==[] goto checkowner
 
 :promptname
-set /p Nm= Enter new component name (e.g. Alerts): 
+set /p Nm= Enter new plugin name (e.g. Alerts): 
 
 if [%Nm%]==[] goto checkname
 
