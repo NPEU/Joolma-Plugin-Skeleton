@@ -22,7 +22,6 @@
     <files>
         <filename plugin="_plgn">_plgn.php</filename>
         <filename>index.html</filename>
-        <filename>update-manifest.xml</filename>
         <folder>language</folder>
     </files>
 
