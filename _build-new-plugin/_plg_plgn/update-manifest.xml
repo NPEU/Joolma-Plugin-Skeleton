@@ -8,7 +8,7 @@
         <folder>_grp</folder>
         <version>1.0.0</version>
         <client>site</client>
-        <infourl title="{{OWNER}}: plg__plgn">https://github.com/{{OWNER}}/plg__plgn/releases/tag/1.0.0</infourl>
+        <infourl title="{{OWNER}}: plg__plgn">https://github.com/{{OWNER}}/plg__plgn/releases/tag/v1.0.0</infourl>
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/{{OWNER}}/plg__plgn/archive/v1.0.0.zip</downloadurl>
         </downloads>
