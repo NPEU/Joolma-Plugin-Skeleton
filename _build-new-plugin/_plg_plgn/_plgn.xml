@@ -16,7 +16,7 @@
 
     <updateservers>
         <!-- Note: No spaces or linebreaks allowed between the server tags -->
-        <server type="extension" name="plg__plgn Update Site">https://raw.githubusercontent.com/{{OWNER}}/plg__plgn/master/update-manifest.xml</server>
+        <server type="extension" name="{{OWNER}}: plg__plgn Update Site">https://raw.githubusercontent.com/{{OWNER}}/plg__plgn/master/update-manifest.xml</server>
     </updateservers>
     
     <files>
