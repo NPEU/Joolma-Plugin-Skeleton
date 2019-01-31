@@ -17,7 +17,7 @@ set /p Gp= Enter new plugin group (e.g. User):
 if [%Gp%]==[] goto checkgroup
 
 :promptdesc
-set /p Ds= Enter new component description (e.g. "User alerts plugin"):
+set /p Ds= Enter new plugin description (e.g. "User alerts plugin"):
 
 if [%Ds%]==[] goto checkdesc
 
