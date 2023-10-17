@@ -24,7 +24,8 @@ $plg_lc_group = 'plg_' . str_replace(' ', '', $lc_group);
 $plg_uc_group = strtoupper(str_replace(' ', '', $plg_lc_group));
 
 
-$classname   = $group . str_replace(' ', '', $name);
+$classname   = str_replace(' ', '', $name);
+#$classname   = $group . str_replace(' ', '', $name);
 
 echo 'Classname: ' . $classname . "\n";
 
@@ -36,8 +37,12 @@ copy_dir(__DIR__ . '/_plg_plgn', $new_dir);
 
 perform_renames(
     $new_dir,
-    array('_plgn', str_replace(' ', '', $lc_name)),
-    array(
+    [
+        '_plgn' => str_replace(' ', '', $lc_name),
+        '_grp'  => $lc_group,
+        '_Plgn' => $classname
+    ],
+    [
         '{{OWNER}}'         => $owner,
         '{{NAME}}'          => $name,
         '{{NAME-NO-SPACE}}' => str_replace(' ', '', $name),
@@ -50,7 +55,7 @@ perform_renames(
         '_PLGN'             => '_' . str_replace(' ', '', $uc_name),
         '{{MONTH}}'         => date('F'),
         '{{YEAR}}'          => date('Y')
-    )
+    ]
 );
 
 perform_renames(
