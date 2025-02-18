@@ -91,9 +91,8 @@ class _Plgn extends CMSPlugin implements SubscriberInterface
         $form    = $args[0];
         $data    = $args[1];
 
-        if (!($form instanceof \Joomla\CMS\Form\Form)) {
-            throw new GenericDataException(Text::_('JERROR_NOT_A_FORM'), 500);
-            return false;
+        if (!$form instanceof \Joomla\CMS\Form\Form) {
+            return;
         }
 
         $app    = Factory::getApplication();
