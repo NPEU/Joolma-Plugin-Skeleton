@@ -1,5 +1,5 @@
 <?php
-defined('_JEXEC') || die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Extension\PluginInterface;
 use Joomla\CMS\Factory;
@@ -9,6 +9,7 @@ use Joomla\DI\ServiceProviderInterface;
 use Joomla\Event\DispatcherInterface;
 
 use {{OWNER}}\Plugin\{{GRP}}\_Plgn\Extension\_Plgn;
+
 
 return new class () implements ServiceProviderInterface {
     public function register(Container $container)

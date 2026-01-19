@@ -9,12 +9,13 @@
 
 namespace {{OWNER}}\Plugin\{{GRP}}\_Plgn\Extension;
 
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Event\Event;
 use Joomla\Event\SubscriberInterface;
+
 
 /**
  * {{DESCRIPTION}}
